@@ -59,6 +59,7 @@ if [[ "$target" == *"/"* ]]; then
 		nmap -O --top-ports 1 $target > targets2
 		cat ./targets2 | grep -Ee '\b([0-9]{1,3}\.){3}[0-9]{1,3}\b' -e "OS details:" | awk '/Nmap scan report/ {print ++i ". " $NF} /OS details:/ {print}'
 		read -p "[?] Please enter your choice here: " target
+  		rm -r targets2
 fi
 
 # Allow the user to choose 'Basic' or 'Full'
